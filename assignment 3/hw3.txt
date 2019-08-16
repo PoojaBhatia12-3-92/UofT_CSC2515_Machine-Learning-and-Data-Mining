@@ -1,0 +1,19 @@
+Here is Python code:
+def gradientDescent(X, y, theta, alpha, num_iters):
+    """
+       Performs gradient descent to learn theta
+    """
+    m = y.size  # number of training examples
+    for i in range(num_iters):
+        y_hat = np.dot(X, theta)
+        theta = theta - alpha * (1.0/m) * np.dot(X.T, y_hat-y)
+    return theta
+
+
+
+train_x =x[0:int(((0.7))*n)]
+train_y =y[0:int((0.7)*n)]
+test_x=x[int((0.7)*n):n]
+test_y=y[int((0.7)*n):n]
+
+hw3_writeup
